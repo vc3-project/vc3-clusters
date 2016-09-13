@@ -1,0 +1,122 @@
+{
+    "uchicago_rcc": {
+        "last_update": 1473798596,
+        "batch_system": "slurm",
+        "version": "14.11.11",
+        "partitions": {
+            "amd": {
+                "max_nodes": null,
+                "max_cpus": null,
+                "max_cpus_per_user": null,
+                "max_nodes_per_user": null,
+                "max_jobs_per_user": 256,
+                "max_submit_jobs": null,
+                "max_walltime": 129600
+            },
+            "bigmem": {
+                "max_nodes": null,
+                "max_cpus": null,
+                "max_cpus_per_user": null,
+                "max_nodes_per_user": null,
+                "max_jobs_per_user": 2,
+                "max_submit_jobs": null,
+                "max_walltime": 129600
+            },
+            "gpu": {
+                "max_nodes": null,
+                "max_cpus": null,
+                "max_cpus_per_user": null,
+                "max_nodes_per_user": null,
+                "max_jobs_per_user": 16,
+                "max_submit_jobs": null,
+                "max_walltime": 129600
+            },
+            "ivyb": {
+                "max_nodes": null,
+                "max_cpus": null,
+                "max_cpus_per_user": null,
+                "max_nodes_per_user": null,
+                "max_jobs_per_user": null,
+                "max_submit_jobs": null,
+                "max_walltime": 129600
+            },
+            "mic": {
+                "max_nodes": null,
+                "max_cpus": null,
+                "max_cpus_per_user": null,
+                "max_nodes_per_user": null,
+                "max_jobs_per_user": null,
+                "max_submit_jobs": null,
+                "max_walltime": 129600
+            },
+            "sandyb": {
+                "max_nodes": null,
+                "max_cpus": null,
+                "max_cpus_per_user": 768,
+                "max_nodes_per_user": 48,
+                "max_jobs_per_user": 48,
+                "max_submit_jobs": 500,
+                "max_walltime": 129600
+            },
+            "viz": {
+                "max_nodes": 1,
+                "max_cpus": 4,
+                "max_cpus_per_user": 4,
+                "max_nodes_per_user": null,
+                "max_jobs_per_user": null,
+                "max_submit_jobs": 1,
+                "max_walltime": 57600
+            },
+            "xenon1t": {
+                "max_nodes": null,
+                "max_cpus": null,
+                "max_cpus_per_user": null,
+                "max_nodes_per_user": null,
+                "max_jobs_per_user": null,
+                "max_submit_jobs": null,
+                "max_walltime": 129600 
+            }
+        },
+        "storage": {
+            "/home":{
+                "shared": true,
+                "type": "gpfs",
+                "mount_opts": "rw,bind"
+            },
+            "/scratch/midway/$(whoami)": {
+                "shared": true,
+                "type": "gpfs",
+                "mount_opts": "rw,bind"
+            },
+            "/cvmfs": {
+                "shared": true,
+                "type": "nfs",
+                "mount_opts": "ro,noatime,nodiratime,nfsvers=3,ac,actimeo=60,lookupcache=all,addr=10.50.180.8"
+            },
+            "/scratch/local": {
+                "shared": false,
+                "type": "ext4",
+                "mount_opts": "rw,bind"
+            }
+        },
+        "software": {
+            "distribution": "modules",
+            "variant": "tcl",
+            "version": "1.147",
+            "available": {
+                "gcc": {
+                    "version": ["4.7","4.8","4.9","6.1"],
+                    "default": "4.8"
+                },
+                "amber": {
+                    "version": ["12","14","16"],
+                    "default": "12"
+                },
+                "cmake": {
+                    "version": ["2.8","3.2","3.4","3.6.1"],
+                    "default": "3.6.1"
+                }
+            }
+        }
+    }
+}
